@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -37,6 +39,27 @@ class MainActivity : AppCompatActivity() {
             myHeight = 180.2
 
             Log.d("변수연습02",myName )
+
+        }
+
+        btnCondition01.setOnClickListener {
+//            조건문 01 버튼이 눌리면 실행 될 코드
+
+            val userAge = 12
+
+//            나이가 20살 이상인가? -> 로그로 "성인입니다." 문장 출력
+            if(userAge>=20) {
+                Log.d("조건문01","성인입니다")
+            }
+            else if (userAge >= 17) {
+                Log.d("조건문01","고딩입니당")
+            }
+            else if (userAge>=14) {
+                Log.d("조건문01","중딩입니당")
+            }
+            else {
+                Log.d("조건문01","초등학생이거나, 미취학 아동이에요")
+            }
 
         }
 
