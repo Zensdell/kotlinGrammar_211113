@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
 
@@ -72,7 +71,7 @@ class MainActivity : AppCompatActivity() {
 //            A 회사의 조건
             val companyASalarly = 3000
             val companyADistance = 50
-            val companyAWorkEasy = true
+            val companyAEarlyoff = true
 
 //            1번 구직자는 취업 의사?
 //            조건 : 연봉 4천 이상이면 OK
@@ -83,7 +82,7 @@ class MainActivity : AppCompatActivity() {
 //            2번 구직자
 //            조건 : 이동시간이 30분 이내 or 빨리 퇴근
 
-            val person02OK = (companyADistance <=30) || (companyAWorkEasy)
+            val person02OK = (companyADistance <=30) || (companyAEarlyoff)
 
 //            Bool변수 = "true"는 할 필요가 없는 질문.
 //            Bool 변수 안에 있는 값을 그대로 꺼내쓰면, == true와 항상 같은 결과.
@@ -93,7 +92,7 @@ class MainActivity : AppCompatActivity() {
 //            3번 구직자
 //            조건 : 빨리 퇴근안하는 회사 -> NOT 연산
 
-            val person03ok = !companyAWorkEasy
+            val person03ok = !companyAEarlyoff
             Log.d("조건문02", person03ok.toString())
         }
 
