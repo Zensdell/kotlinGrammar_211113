@@ -28,5 +28,17 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        btnVariable02.setOnClickListener {
+        //     변수 연습 02
+            var myName = "구영모"
+            val myBirthYear = 1990
+            var myHeight = 185.5
+
+            myHeight = 180.2
+
+            Log.d("변수연습02",myName )
+
+        }
+
     }
 }
